@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>餐厅网站建设 — 信息收集表</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: #f5f0eb;
+      color: #2c2c2c;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #c0392b 0%, #8B0000 100%);
+      padding: 48px 48px 36px;
+      color: #fff;
+      position: relative;
+    }
+    .header::after {
+      content: '🏮';
+      position: absolute;
+      right: 48px;
+      top: 40px;
+      font-size: 56px;
+      opacity: 0.3;
+    }
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px;
+      opacity: 0.85;
+      line-height: 1.8;
+    }
+    .header .subtitle {
+      display: inline-block;
+      margin-top: 12px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Body */
+    .body { padding: 40px 48px 48px; }
+
+    .intro {
+      background: #fff8f0;
+      border-left: 4px solid #c0392b;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #8B0000;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f0e0e0;
+    }
+    .section-title .icon {
+      font-size: 18px;
+    }
+
+    /* Items */
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 6px;
+      transition: background 0.2s;
+    }
+    .item:hover { background: #fdf6f6; }
+
+    .checkbox {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border: 2px solid #c0392b;
+      border-radius: 4px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    .item-content { flex: 1; }
+    .item-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2c2c2c;
+      line-height: 1.5;
+    }
+    .item-desc {
+      font-size: 12.5px;
+      color: #888;
+      margin-top: 2px;
+      line-height: 1.6;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .badge-required { background: #fde8e8; color: #c0392b; }
+    .badge-optional { background: #e8f4fd; color: #2980b9; }
+
+    /* Note box */
+    .note {
+      background: #fffbeb;
+      border: 1px solid #f5d76e;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 13px;
+      color: #7d6608;
+      line-height: 1.8;
+      margin-top: 36px;
+    }
+    .note strong { color: #6d5700; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      background: #faf5f5;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #f0e0e0;
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { box-shadow: none; border-radius: 0; }
+      .item:hover { background: transparent; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>餐厅网站建设 · 信息收集表</h1>
+    <p>请根据以下清单准备好相关资料，<br/>以便我们顺利为您的餐厅打造专业网站。</p>
+    <span class="subtitle">📋 请在准备好的项目旁打勾</span>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <div class="intro">
+      您好！为了更好地为您的餐厅制作网站，请尽量提供以下信息。标注
+      <span class="badge badge-required">必填</span> 的是核心内容，标注
+      <span class="badge badge-optional">可选</span> 的可以后续补充。如有任何疑问，欢迎随时联系。
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">🏪</span> 基本信息</div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">餐厅名称 <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">中文名称 + 英文名称（如有）</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">餐厅 Logo <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">高清图片格式，建议提供 PNG 或 SVG（透明背景更佳）</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">餐厅简介 / 品牌故事 <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">例如：主打菜系、创始背景、特色文化等，100–300 字即可</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">联系电话 <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">用于网站显示及顾客联系</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">电子邮件地址 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">用于在线联系表单接收邮件</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">📍</span> 地址与营业时间</div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">餐厅地址 <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">完整地址，用于嵌入 Google 地图 / 百度地图</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">每日营业时间 <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">例如：周一至周五 11:00–22:00，周末 10:00–23:00</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">停车 / 交通信息 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">附近停车场、地铁站或公交路线</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">🍜</span> 菜单信息</div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">完整菜单 <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">分类（前菜、主菜、甜点、饮品等）+ 菜名 + 价格，可提供 PDF 或 Word 文档</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">菜品描述 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">每道菜的简短介绍，10–30 字即可</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">特殊标注 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">例如：素食 🌱、纯素 🌿、辣度 🌶、过敏原（坚果、花生等）</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">📷</span> 图片素材</div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">菜品照片 <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">主要菜品的高清照片（越多越好，建议专业拍摄）</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">餐厅环境照片 <span class="badge badge-required">必填</span></div>
+          <div class="item-desc">室内用餐区、外立面、装潢风格等</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">厨师 / 团队照片 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">增加亲切感和信任度</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">🛒</span> 功能需求</div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">是否需要在线订位功能？</div>
+          <div class="item-desc">顾客可通过网站直接预订座位</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">是否需要在线点餐 / 外卖功能？</div>
+          <div class="item-desc">例如自建外卖系统或对接第三方平台</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">是否需要多语言？</div>
+          <div class="item-desc">例如中文 + 英文 双语网站</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">是否需要活动预订（宴会 / 包厢）？ <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">适合有包厢或定制宴席服务的餐厅</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">🌐</span> 网站技术设置</div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">域名 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">是否已购买域名？例如 www.myrestaurant.com</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">参考网站风格</div>
+          <div class="item-desc">喜欢哪些餐厅网站的设计风格？提供链接即可</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">品牌主色调 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">例如：红色、黑色、金色等偏好颜色</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">📱</span> 社交媒体账号</div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">社交平台账号链接 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">Instagram、Facebook、WeChat、Yelp、Google Business、TikTok 等</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="checkbox"></div>
+        <div class="item-content">
+          <div class="item-label">顾客评价 / 媒体报道 <span class="badge badge-optional">可选</span></div>
+          <div class="item-desc">好评截图或报道链接，可展示在网站增加信任度</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <div class="note">
+      ⭐ <strong>温馨提示：</strong>优先准备 <strong>菜单</strong> 和 <strong>菜品 / 环境照片</strong>，这是餐厅网站最核心的内容。其他信息可以边制作边补充，不影响整体进度。如有任何疑问，随时联系我！
+    </div>
+
+  </div><!-- end body -->
+
+  <!-- Footer -->
+  <div class="footer">
+    餐厅网站建设信息收集表 · 请将填写好的资料发送给网站设计师
+  </div>
+
+</div>
+</body>
+</html>
